@@ -1,0 +1,102 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ldap View</title>
+	<script type="text/javascript">
+	//경로설정
+	var contextPath = "http://192.168.56.201:8080/views/Ldap_view/1.0.0/INSTANCE";
+	</script>
+	
+	
+    <!--    공통항목(부트스트랩) -->
+    <link href="resources/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--    index 페이지 전용-->
+    <link href="resources/css/index.css" rel="stylesheet">
+    <link href="resources/css/common.css" rel="stylesheet">
+    <!--    jstree-->
+    <link href="resources/node_modules/jstree-bootstrap-theme/dist/themes/proton/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+
+
+
+ 
+    <div class="container theme-showcase">
+        <div class="col-lg-12">
+            <div class="page-header" style="text-align: center;">
+                <h1>사용자 정보</h1>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="table" id="tree">
+                    
+                    </div>
+                </div>
+                <div class="col-lg-8"></div>
+               
+            </div>
+            <div class="col-lg-12 btn-container">
+                <button type="button" class="btn add_user btn-primary" data-toggle="modal" data-backdrop="static"  data-target="#myModal">사용자 추가</button>
+                <button type="button" class="btn btn-warning">폴더 생성</button>
+                <button type="button" class="btn btn-danger">삭제</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header bg-primary">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">사용자 추가</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="form-group">
+                            <label>사용자명</label>
+                            <input class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>그룹</label>
+                            <input class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>권한</label>
+                            <input class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default">확인</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--    공통항목-->
+    <script src="resources/node_modules/jquery/dist/jquery.js"></script>
+    
+    <!--    공통항목(jstrre)-->
+    <script src="resources/node_modules/jstree/dist/jstree.min.js"></script>
+    <!--    공통항목(부트스트랩)-->
+    <script src="resources/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="resources/js/common.js"></script>
+    <!--    index 페이지 전용-->
+    <script src="resources/js/index.js"></script>
+</body>
+
+</html>
